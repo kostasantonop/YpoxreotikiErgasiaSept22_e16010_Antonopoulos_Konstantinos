@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center>  
+{{msg}}
+</center>  
+
+<center>  
+<form action="./new_reservation_handler" method="post">
+      
+    <div class="container">
+        
+        <h2> New reservation </h2>
+
+        <label for="fcode"><b>Flight code:&nbsp; </b></label>
+        <input type="text" placeholder="Enter flight code" name="fcode" required>
+        <br><br>
+
+        <label for="cardnum"><b>Card number:&nbsp; </b></label>
+        <input type="text" placeholder="Enter card number" name="cardnum" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        
+        <br><br>
+        
+    </div>
+
+</form>
+
+<a href="./search_flight">Search flight</a><br>
+<a href="./view_reservation">View reservation</a><br>
+<a href="./cancel_reservation">Cancel reservation</a><br>
+<a href="./sorted_reservation_list">Sorted reservation list</a><br>
+<a href="./view_cheapest_expensivest_reservation">View cheapest-expensivest reservation</a><br>
+<a href="./view_reservations_of_certain_destination">View reservations of certain destination</a><br>
+<a href="./deactivate_account">Deactivate account</a><br>    
+</center>
+
+{% endblock %}

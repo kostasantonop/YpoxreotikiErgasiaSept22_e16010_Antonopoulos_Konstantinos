@@ -1,0 +1,235 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center> 
+    {{msg}}
+</center> 
+
+<center>
+    <form action="./flight_add_handler" method="post">
+    
+    <div class="container">
+    
+    <h2> Add New Flight </h2>
+
+    Date/Time: &nbsp; <input type="date" id="flight_date" name="flight_date" required>
+    
+    
+    <select name="hour" id="hour" required>
+        <option value="00">00</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>       
+    </select>
+    :
+    <select name="minute" id="minute" required>
+        <option value="00">00</option>
+        <option value="05">05</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="30">30</option>
+        <option value="35">35</option>
+        <option value="40">40</option>
+        <option value="45">45</option>
+        <option value="50">50</option>
+        <option value="55">55</option>        
+    </select>
+
+    <br><br>
+    Departure: &nbsp; 
+    <select name="departure" id="departure" required>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Athens">Athens</option>
+        <option value="Bangkok">Bangkok</option>
+        <option value="Beijing">Beijing</option>
+        <option value="Bogota">Bogota</option>
+        <option value="Brasilia">Brasilia</option>
+        <option value="Brussels">Brussels</option>
+        <option value="Bucharest">Bucharest</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Canberra">Canberra</option>
+        <option value="Caracas">Caracas</option>
+        <option value="Conakry">Conakry</option>
+        <option value="Copenhagen">Copenhagen</option>
+        <option value="Dakar">Dakar</option>
+        <option value="Damascus">Damascus</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Havana">Havana</option>
+        <option value="Helsinki">Helsinki</option>
+        <option value="Islamabad">Islamabad</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Jerusalem">Jerusalem</option>
+        <option value="Palestine">Palestine</option>
+        <option value="Kabul">Kabul</option>
+        <option value="Kingston">Kingston</option>
+        <option value="Lima">Lima</option>
+        <option value="Lisbon">Lisbon</option>
+        <option value="London">London</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Mexico City">Mexico City</option>
+        <option value="Minsk">Minsk</option>
+        <option value="Montevideo">Montevideo</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Nicosia">Nicosia</option>
+        <option value="Nuuk">Nuuk</option>
+        <option value="Oslo">Oslo</option>
+        <option value="Ottawa">Ottawa</option>
+        <option value="Panama City">Panama City</option>
+        <option value="Paris">Paris</option>
+        <option value="Prague">Prague</option>
+        <option value="Pristina">Pristina</option>
+        <option value="Reykjavik">Reykjavik</option>
+        <option value="Riga">Riga</option>
+        <option value="Rome">Rome</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Marino">San Marino</option>
+        <option value="Seoul">Seoul</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Skopje">Skopje</option>
+        <option value="Sofia">Sofia</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Tirana">Tirana</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Victoria">Victoria</option>
+        <option value="Vienna">Vienna</option>
+        <option value="Warsaw">Warsaw</option>
+        <option value="Washington D.C.">Washington D.C.</option>
+        <option value="Yaounde">Yaounde</option>
+        <option value="Zagreb">Zagreb</option>
+    </select>
+
+    <br><br>
+    Destination: &nbsp; 
+    <select name="destination" id="destination" required>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Athens">Athens</option>
+        <option value="Bangkok">Bangkok</option>
+        <option value="Beijing">Beijing</option>
+        <option value="Bogota">Bogota</option>
+        <option value="Brasilia">Brasilia</option>
+        <option value="Brussels">Brussels</option>
+        <option value="Bucharest">Bucharest</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Canberra">Canberra</option>
+        <option value="Caracas">Caracas</option>
+        <option value="Conakry">Conakry</option>
+        <option value="Copenhagen">Copenhagen</option>
+        <option value="Dakar">Dakar</option>
+        <option value="Damascus">Damascus</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Havana">Havana</option>
+        <option value="Helsinki">Helsinki</option>
+        <option value="Islamabad">Islamabad</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Jerusalem">Jerusalem</option>
+        <option value="Palestine">Palestine</option>
+        <option value="Kabul">Kabul</option>
+        <option value="Kingston">Kingston</option>
+        <option value="Lima">Lima</option>
+        <option value="Lisbon">Lisbon</option>
+        <option value="London">London</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Mexico City">Mexico City</option>
+        <option value="Minsk">Minsk</option>
+        <option value="Montevideo">Montevideo</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Nicosia">Nicosia</option>
+        <option value="Nuuk">Nuuk</option>
+        <option value="Oslo">Oslo</option>
+        <option value="Ottawa">Ottawa</option>
+        <option value="Panama City">Panama City</option>
+        <option value="Paris">Paris</option>
+        <option value="Prague">Prague</option>
+        <option value="Pristina">Pristina</option>
+        <option value="Reykjavik">Reykjavik</option>
+        <option value="Riga">Riga</option>
+        <option value="Rome">Rome</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Marino">San Marino</option>
+        <option value="Seoul">Seoul</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Skopje">Skopje</option>
+        <option value="Sofia">Sofia</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Tirana">Tirana</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Victoria">Victoria</option>
+        <option value="Vienna">Vienna</option>
+        <option value="Warsaw">Warsaw</option>
+        <option value="Washington D.C.">Washington D.C.</option>
+        <option value="Yaounde">Yaounde</option>
+        <option value="Zagreb">Zagreb</option>
+    </select>
+
+    <br><br>
+    Hours: <select name="hours" id="hours" required>        
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        
+    </select>
+
+    <br><br>
+	
+	<label for="price"><b>Price:&nbsp; </b></label>
+	<input type="text" placeholder="Enter Price" name="price" required>
+	<br><br>
+	
+    <button type="submit">Add flight</button>
+    <br><br>   
+    </div>
+  
+  </form>
+
+<a href="./add_admin">Add new admin</a><br>
+<a href="./admin_change_price">Change price of flight</a><br>
+<a href="./admin_cancel_flight">Cancel flight</a><br>
+
+</center>
+
+{% endblock %}

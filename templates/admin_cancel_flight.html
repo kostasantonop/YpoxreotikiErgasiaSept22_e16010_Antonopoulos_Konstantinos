@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center>  
+{{msg}}
+</center>  
+
+<center>  
+<form action="./admin_cancel_flight_handler" method="post">
+      
+    <div class="container">
+        
+        <h2> Cancel Flight </h2>
+
+        <label for="fcode"><b>Flight code:&nbsp; </b></label>
+        <input type="text" placeholder="Enter flight code" name="fcode" required>
+        <br><br>
+        <button type="submit">Cancel Flight</button>
+        
+        <br><br>
+        
+    </div>
+
+</form>
+
+<a href="./add_admin">Add new admin</a><br>
+<a href="./admin_menu">Add new flight</a><br>
+<a href="./admin_change_price">Cancel flight</a><br>
+
+</center>
+
+{% endblock %}

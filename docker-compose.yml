@@ -1,0 +1,18 @@
+app:
+  build: .
+  command: python -u app.py
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/app
+  links:
+    - db
+db:
+  image: mongo:latest
+  hostname: airlines
+  environment:
+    - MONGO_INITDB_DATABASE=airlines
+    - MONGO_INITDB_ROOT_USERNAME=kant
+    - MONGO_INITDB_ROOT_PASSWORD=pass
+  ports:
+    - 27017:27017

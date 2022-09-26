@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center> 
+{{msg}}
+</center> 
+
+<center>  
+<form action="./reactivation_handler" method="post">
+    
+    <div class="container">
+        
+        <h2> Reactivate Account </h2>
+
+        <label for="uname"><b>Username:&nbsp; </b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br><br>
+
+        <label for="recovery"><b>Activation code:&nbsp; </b></label>
+        <input type="text" placeholder="Enter activation code" name="recovery" required>
+        <br><br>
+
+        <button type="submit">Reactivate</button>
+       
+        <br><br>
+        
+    </div>
+
+  </form>
+
+  <a href="./">Go to login page</a><br>
+</center>
+{% endblock %}

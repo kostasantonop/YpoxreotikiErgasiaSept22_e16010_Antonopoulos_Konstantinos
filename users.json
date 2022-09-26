@@ -1,0 +1,38 @@
+
+[
+
+    {
+    "email" : "kantonop@yahoo.com",
+    "username" :  "kant",
+    "password" : "pass1234",
+    "name" : "Konstantinos",
+    "surname" : "Antonopoulos",
+    "passport" : "GR9974521",
+    "active" : 1,
+    "role" : 1,
+    "recovery" : "rckantonop21"
+    },    
+    {
+        "email" : "mariadb@gmail.com",
+        "username" :  "mariadb",
+        "password" : "pass5678",
+        "name" : "Maria",
+        "surname" : "Diabolitsis",
+        "passport" : "GR6660666",
+        "active" : 1,
+        "role" : 0,
+        "recovery" : "hellbells666"
+    },
+    {
+        "email" : "annakar@gmail.ru",
+        "username" :  "annak",
+        "password" : "pass9999",
+        "name" : "Anna",
+        "surname" : "Karenina",
+        "passport" : "RU1873487",
+        "active" : 1,
+        "role" : 0,
+        "recovery" : "leontolstoi1"
+    }
+
+]

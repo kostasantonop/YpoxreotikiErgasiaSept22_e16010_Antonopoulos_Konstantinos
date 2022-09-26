@@ -1,0 +1,49 @@
+
+[
+
+{
+"code" : "AR22102816",
+"date" : "2022-10-28",
+"time" : "16:30",
+"departure" :  "Athens",
+"destination" : "Rome",
+"price" : 90,
+"hours" : 2,
+"available_seats" : 219
+},
+
+{
+"code" : "AR22102819",
+"date" : "2022-10-28",
+"time" : "19:00",
+"departure" :  "Athens",
+"destination" : "Rome",
+"price" : 95,
+"hours" : 2,
+"available_seats" : 220
+},
+
+{
+"code" : "AR22102822",
+"date" : "2022-10-28",
+"time" : "22:15",
+"departure" :  "Athens",
+"destination" : "Rome",
+"price" : 85.20,
+"hours" : 2,
+"available_seats" : 220
+},
+
+{
+"code" : "AP22103118",
+"date" : "2022-10-31",
+"time" : "18:20",
+"departure" :  "Athens",
+"destination" : "Paris",
+"price" : 120,
+"hours" : 4,
+"available_seats" : 220
+}
+
+]
+

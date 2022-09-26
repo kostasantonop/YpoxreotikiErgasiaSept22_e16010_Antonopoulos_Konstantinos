@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center> 
+{{msg}}
+</center> 
+
+<center>  
+<form action="./login_handler" method="post">
+    
+    <div class="container">
+        
+        <h2> Welcome to DS Airlines! </h2> 
+
+        <label for="uname"><b>Username:&nbsp; </b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br><br>
+
+        <label for="pass"><b>Password:&nbsp; </b></label>
+        <input type="password" placeholder="Enter Password" name="pass" required>
+        <br><br>
+
+        <button type="submit">Login</button>
+        <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <br><br>
+        
+    </div>
+  
+    <div class="container" style="background-color: #f1f1f1">
+      
+      <a href="./signup">Create account</a><br>
+      <a href="./reactivation">Reactivate account</a>
+           
+    </div>
+  </form>
+</center>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<center> 
+    {{msg}}
+</center> 
+
+<center>
+    <form action="./view_cheapest_expensivest_reservation_handler" method="post">
+    
+    <div class="container">
+    <h2> View Cheapest/Expensivest Reservation </h2>
+    Price: &nbsp; 
+    <select name="price_order" id="price_order" required>
+        <option value="cheapest"> Cheapest</option>
+        <option value="expensivest">Expensivest</option>        
+    </select>
+
+    <br><br>
+
+    <button type="submit">View</button>
+    <br><br>   
+    </div>
+  
+  </form>
+
+<a href="./search_flight">Search flight</a><br>
+<a href="./new_reservation">New reservation</a><br>
+<a href="./view_reservation">View reservation</a><br>
+<a href="./cancel_reservation">Cancel reservation</a><br>
+<a href="./sorted_reservation_list">Sorted reservation list</a><br>
+<a href="./view_reservations_of_certain_destination">View reservations of certain destination</a><br>
+<a href="./deactivate_account">Deactivate account</a><br>
+</center>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center>
+{{msg}}
+</center>
+
+<center>  
+    <form action="./view_reservation_handler" method="post">
+            
+        <div class="container">
+            
+            <h2> View reservation </h2>
+
+            <label for="resid"><b>Reservation id:&nbsp; </b></label>
+            <input type="text" placeholder="Enter reservation id" name="resid" required>
+            <br><br>
+             
+            <button type="submit">Go</button>
+            
+            <br><br>
+            
+        </div>
+ 
+      </form>
+      <a href="./search_flight">Search flight</a><br>
+      <a href="./new_reservation">New reservation</a><br>
+      <a href="./cancel_reservation">Cancel reservation</a><br>
+      <a href="./sorted_reservation_list">Sorted reservation list</a><br>
+      <a href="./view_cheapest_expensivest_reservation">View cheapest-expensivest reservation</a><br>
+      <a href="./view_reservations_of_certain_destination">View reservations of certain destination</a><br>
+      <a href="./deactivate_account">Deactivate account</a><br>
+
+    </center>
+
+{% endblock %}

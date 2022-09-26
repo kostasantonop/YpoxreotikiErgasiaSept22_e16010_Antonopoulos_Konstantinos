@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center> 
+{{msg}}
+</center> 
+
+<center>  
+<form action="./add_admin_handler" method="post">
+    
+    <div class="container">
+        
+        <h2> Add New Admin </h2>
+
+        <label for="email"><b>Email:&nbsp; </b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <br><br>
+
+        <label for="uname"><b>Username:&nbsp; </b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br><br>
+
+        <label for="pass"><b>Password:&nbsp; </b></label>
+        <input type="password" placeholder="Enter Password" name="pass" required>
+        <br><br>
+
+        <label for="cpass"><b>Retype Password:&nbsp; </b></label>
+        <input type="password" placeholder="Enter Password Again" name="cpass" required>
+        <br><br>
+
+        <label for="name"><b>First name:&nbsp; </b></label>
+        <input type="text" placeholder="Enter First Name" name="name" required>
+        <br><br>
+        
+        <label for="surname"><b>Last name:&nbsp; </b></label>
+        <input type="text" placeholder="Enter Last Name" name="surname" required>
+        <br><br>
+
+        <label for="passport"><b>Passport:&nbsp; </b></label>
+        <input type="text" placeholder="Enter passport" name="passport" required>
+        <br><br>
+
+        <button type="submit">Add Admin</button>
+        <br><br>        
+    </div>
+  
+  </form>
+
+<a href="./admin_menu">Add new flight</a><br>
+<a href="./admin_change_price">Change price of flight</a><br>
+<a href="./admin_cancel_flight">Cancel flight</a><br>
+
+</center>
+
+{% endblock %}

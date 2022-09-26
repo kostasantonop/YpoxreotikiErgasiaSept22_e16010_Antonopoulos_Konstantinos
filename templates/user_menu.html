@@ -1,0 +1,166 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<center> 
+    {{msg}}
+</center> 
+
+<center>
+    <form action="./flight_search_handler" method="post">
+    
+    <div class="container">
+    
+    <h2> Search flight </h2>
+    
+    Date: &nbsp; <input type="date" id="flight_date" name="flight_date" required>
+
+    <br><br>
+    Departure: &nbsp; 
+    <select name="departure" id="departure" required>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Athens">Athens</option>
+        <option value="Bangkok">Bangkok</option>
+        <option value="Beijing">Beijing</option>
+        <option value="Bogota">Bogota</option>
+        <option value="Brasilia">Brasilia</option>
+        <option value="Brussels">Brussels</option>
+        <option value="Bucharest">Bucharest</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Canberra">Canberra</option>
+        <option value="Caracas">Caracas</option>
+        <option value="Conakry">Conakry</option>
+        <option value="Copenhagen">Copenhagen</option>
+        <option value="Dakar">Dakar</option>
+        <option value="Damascus">Damascus</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Havana">Havana</option>
+        <option value="Helsinki">Helsinki</option>
+        <option value="Islamabad">Islamabad</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Jerusalem">Jerusalem</option>
+        <option value="Palestine">Palestine</option>
+        <option value="Kabul">Kabul</option>
+        <option value="Kingston">Kingston</option>
+        <option value="Lima">Lima</option>
+        <option value="Lisbon">Lisbon</option>
+        <option value="London">London</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Mexico City">Mexico City</option>
+        <option value="Minsk">Minsk</option>
+        <option value="Montevideo">Montevideo</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Nicosia">Nicosia</option>
+        <option value="Nuuk">Nuuk</option>
+        <option value="Oslo">Oslo</option>
+        <option value="Ottawa">Ottawa</option>
+        <option value="Panama City">Panama City</option>
+        <option value="Paris">Paris</option>
+        <option value="Prague">Prague</option>
+        <option value="Pristina">Pristina</option>
+        <option value="Reykjavik">Reykjavik</option>
+        <option value="Riga">Riga</option>
+        <option value="Rome">Rome</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Marino">San Marino</option>
+        <option value="Seoul">Seoul</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Skopje">Skopje</option>
+        <option value="Sofia">Sofia</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Tirana">Tirana</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Victoria">Victoria</option>
+        <option value="Vienna">Vienna</option>
+        <option value="Warsaw">Warsaw</option>
+        <option value="Washington D.C.">Washington D.C.</option>
+        <option value="Yaounde">Yaounde</option>
+        <option value="Zagreb">Zagreb</option>
+    </select>
+
+    <br><br>
+    Destination: &nbsp; 
+    <select name="destination" id="destination" required>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Athens">Athens</option>
+        <option value="Bangkok">Bangkok</option>
+        <option value="Beijing">Beijing</option>
+        <option value="Bogota">Bogota</option>
+        <option value="Brasilia">Brasilia</option>
+        <option value="Brussels">Brussels</option>
+        <option value="Bucharest">Bucharest</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Canberra">Canberra</option>
+        <option value="Caracas">Caracas</option>
+        <option value="Conakry">Conakry</option>
+        <option value="Copenhagen">Copenhagen</option>
+        <option value="Dakar">Dakar</option>
+        <option value="Damascus">Damascus</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Havana">Havana</option>
+        <option value="Helsinki">Helsinki</option>
+        <option value="Islamabad">Islamabad</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Jerusalem">Jerusalem</option>
+        <option value="Palestine">Palestine</option>
+        <option value="Kabul">Kabul</option>
+        <option value="Kingston">Kingston</option>
+        <option value="Lima">Lima</option>
+        <option value="Lisbon">Lisbon</option>
+        <option value="London">London</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Mexico City">Mexico City</option>
+        <option value="Minsk">Minsk</option>
+        <option value="Montevideo">Montevideo</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Nicosia">Nicosia</option>
+        <option value="Nuuk">Nuuk</option>
+        <option value="Oslo">Oslo</option>
+        <option value="Ottawa">Ottawa</option>
+        <option value="Panama City">Panama City</option>
+        <option value="Paris">Paris</option>
+        <option value="Prague">Prague</option>
+        <option value="Pristina">Pristina</option>
+        <option value="Reykjavik">Reykjavik</option>
+        <option value="Riga">Riga</option>
+        <option value="Rome">Rome</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Marino">San Marino</option>
+        <option value="Seoul">Seoul</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Skopje">Skopje</option>
+        <option value="Sofia">Sofia</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Tirana">Tirana</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Victoria">Victoria</option>
+        <option value="Vienna">Vienna</option>
+        <option value="Warsaw">Warsaw</option>
+        <option value="Washington D.C.">Washington D.C.</option>
+        <option value="Yaounde">Yaounde</option>
+        <option value="Zagreb">Zagreb</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Find</button><br><br>
+       
+    </div>
+  
+  </form>
+
+<a href="./new_reservation">New reservation</a><br>
+<a href="./view_reservation">View reservation</a><br>
+<a href="./cancel_reservation">Cancel reservation</a><br>
+<a href="./sorted_reservation_list">Sorted reservation list</a><br>
+<a href="./view_cheapest_expensivest_reservation">View cheapest-expensivest reservation</a><br>
+<a href="./view_reservations_of_certain_destination">View reservations of certain destination</a><br>
+<a href="./deactivate_account">Deactivate account</a><br>
+</center>
+
+{% endblock %}

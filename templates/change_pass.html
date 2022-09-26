@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<br>
+
+<center> 
+{{msg}}
+</center> 
+
+<center>  
+<form action="./change_pass_handler" method="post">
+
+    <br>
+    
+    <div class="container">
+ 
+        <label for="pass"><b>Password:&nbsp; </b></label>
+        <input type="password" placeholder="Enter Password" name="pass" required>
+        <br><br>
+
+        <label for="cpass"><b>Retype Password:&nbsp; </b></label>
+        <input type="password" placeholder="Enter Password Again" name="cpass" required>
+        <br><br>
+       
+        <button type="submit">Change password</button>
+                
+    </div>
+  
+  </form>
+
+</center>
+{% endblock %}
